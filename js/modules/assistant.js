@@ -3,7 +3,7 @@
 import { chatbotBrain } from '../config/data-store.js';
 
 // ⚠️ STEP 1: PASTE YOUR ACTUAL GEMINI API KEY HERE BETWEEN THE QUOTES
-const GEMINI_API_KEY = "AIzaSyAWVD6E-LUSuAarfQAiVhbr38H_0emvzbM"; 
+const GEMINI_API_KEY = "AIzaSyDgBrh6q_8vrygQ5te4dmiLejmi-Aak20Y"; 
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 let container, messagesContainer, inputField;
