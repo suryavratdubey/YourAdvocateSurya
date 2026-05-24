@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShubhShree & Accounts Pvt Ltd | Founder: Satyavrat & Neha Dubey</title>
+    
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/themes.css">
+    
+    <link rel="stylesheet" href="css/layout.css">
+    
+    <link rel="stylesheet" href="css/components/cursor.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/chatbot.css">
+</head>
+<body>
+
+    <div id="cursor"></div>
+
+    <div class="bg-fixed">
+        <video autoplay muted loop playsinline id="mainVideo" preload="auto" webkit-playsinline>
+            <source src="background.mp4" type="video/mp4" loop>
+        </video>
+    </div>
+
+    <div id="details-overlay">
+        <div class="modal-content">
+            <span class="close-btn">X</span>
+            <span id="m-cat" class="modal-cat"></span>
+            <h2 id="m-title" style="font-size: 3rem; font-weight: 900;"></h2>
+            <div id="m-body">
+                <ul id="m-list" class="bullet-list"></ul>
+                <button id="apply-trigger" class="apply-btn" style="display:none;">JOIN THE VISION</button>
+            </div>
+            
+            <form id="application-form" style="display:none;">
+                <div class="form-grid">
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <label>FULL NAME</label>
+                        <input type="text" id="f-name" required placeholder="Enter Name">
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <label>PHONE NO.</label>
+                        <input type="text" id="f-phone" required placeholder="10 Digit Number">
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <label>EMAIL ADDRESS</label>
+                        <input type="text" id="f-email" required placeholder="example@gmail.com">
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <label>ROLE CATEGORY</label>
+                        <select id="f-role">
+                            <optgroup label="Finance & Compliance">
+                                <option>Accounts Officer</option>
+                                <option>Tax & Compliance Specialist</option>
+                                <option>Audit & Internal Controls Manager</option>
+                                <option>Credit Controller</option>
+                            </optgroup>
+                            <optgroup label="Logistics & Operations">
+                                <option>Logistics Coordinator</option>
+                                <option>Documentation Specialist (HAWB/MAWB)</option>
+                                <option>Shipment Tracking Executive</option>
+                                <option>Fleet & Odd-Dimension Coordinator</option>
+                            </optgroup>
+                            <optgroup label="Business Support">
+                                <option>Billing & Remittance Clerk</option>
+                                <option>Customs & Pricing Consultant</option>
+                                <option>Inventory & Purchase Manager</option>
+                                <option>Customer Success Representative</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <label>CURRENT ADDRESS</label>
+                        <textarea id="f-addr1" maxlength="100" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <label>PERMANENT ADDRESS</label>
+                        <textarea id="f-addr2" maxlength="100" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <label>RESUME</label>
+                        <input type="file" required>
+                    </div>
+                </div>
+                <button type="submit" class="apply-btn">SUBMIT APPLICATION</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="nav-menu">
+        <span class="nav-close">X</span>
+        <a href="javascript:void(0)" onclick="openAbout()">About Us</a>
+        <a href="#services">Services</a>
+        <a href="javascript:void(0)" onclick="openCareers()">Careers</a>
+    </div>
+
+    <header>
+        <a href="javascript:location.reload()" class="brand-link">
+            <div class="brand">ShubhShree & Accounts</div>
+            <div class="tagline">Driven by Standards, Proven by Results</div>
+        </a>
+        <div class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="section-title">CORE CAPABILITIES</div>
+        <div class="skills-cloud" id="skillsCloud"></div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="service-grid">
+            <div class="service-card"><h3>Logistics Finance</h3></div>
+            <div class="service-card"><h3>Business Operations</h3></div>
+            <div class="service-card"><h3>Execution & Tracking</h3></div>
+            <div class="service-card"><h3>Reporting & Controls</h3></div>
+        </div>
+    </section>
+    <div class="flipping-banner-container">
+        <h2 class="banner-title">Why choose us?</h2>
+        <p id="flipping-text">Leveraging over 7 years of precision-engineered financial expertise to streamline your accounting and scale your business.</p>
+    </div>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col footer-brand-card">
+                <a href="javascript:location.reload()" style="text-decoration: none; color: inherit;">
+                    <h4 class="brand" style="font-size: 1.2rem; margin-bottom: 10px;">ShubhShree & Accounts</h4>
+                    <p class="tagline" style="font-size: 0.7rem; color: var(--accent);">Driven by Standards, Proven by Results</p>
+                </a>
+            </div>
+
+            <div class="footer-col footer-prof-card">
+                <h4>For Professionals</h4>
+                <a onclick="openHelpCenter()">Help Center</a>
+                <a onclick="openToS()">Terms of Service</a>
+            </div>
+
+            <div class="footer-col footer-conn-card">
+                <h4>Connect With Us</h4>
+                <a href="mailto:shubhshreeaccounts@gmail.com" class="footer-link">shubhshreeaccounts@gmail.com</a>
+                <p>Phone: 8802017810</p>
+                <p>Support Time: Mon-Fri, 10AM to 07:00PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-names">SATYAVRAT DUBEY & NEHA DUBEY | FOUNDER & DIRECTOR</div>
+            <div class="footer-copyright">2026 ShubhShree & Accounts™. All rights reserved. CIN:PENDING</div>
+        </div>
+    </footer>
+
+    <div id="bot-toggle"><span>💬</span></div>
+    <div id="bot-container">
+        <div id="bot-header">
+            <strong style="color: var(--accent); font-size: 0.9rem; letter-spacing: 1px;">24x7 ASSISTANT</strong>
+            <span style="cursor:pointer; color: #fff; font-weight: bold;">✕</span>
+        </div>
+        <div id="bot-messages">
+            <div class="msg bot">Welcome to ShubhShree & Accounts. I can help with tracking, billing, or contact info. How can I assist?</div>
+        </div>
+        <div id="bot-input-area">
+            <input type="text" id="bot-input" placeholder="Type here...">
+            <button>➤</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* css/themes.css */
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --glass: rgba(255, 255, 255, 0.95);
+        --border: rgba(0, 0, 0, 0.15);
+        --text-main: #1a1a1a;
+        --text-dim: #333333;
+        --modal-accent: #007b85;
+        --veil-color: rgba(180, 0, 0, 0.15);
+        
+        /* Forces the footer container background to stay deep dark gray */
+        --footer-bg: #0c0c0e;
+    }
+
+    /* SPECIFIC LIGHT MODE FIXES FOR FOOTER TEXT VISIBILITY */
+    footer .footer-col h4 {
+        color: #ffffff !important; /* Forces headers to stay bright white */
+    }
+
+    footer .footer-col p {
+        color: rgba(255, 255, 255, 0.7) !important; /* Soft white for readable text descriptions */
+    }
+
+    footer .footer-bottom .footer-copyright {
+        color: rgba(255, 255, 255, 0.5) !important; /* Clear view for the copyright notice line */
+    }
+}

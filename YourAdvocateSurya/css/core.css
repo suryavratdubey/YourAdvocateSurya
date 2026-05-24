@@ -1,0 +1,87 @@
+/* css/core.css */
+
+:root {
+    /* VIBRANT PALETTE (DARK MODE DEFAULT) */
+    --accent: #00f2ff;
+    --accent-purple: #bd00ff;
+    --glass: rgba(12, 12, 12, 0.85);
+    --border: rgba(255, 255, 255, 0.15);
+    --text-main: #ffffff;
+    --text-dim: rgba(255, 255, 255, 0.7);
+    --card-grad: linear-gradient(135deg, rgba(0, 242, 255, 0.1), rgba(189, 0, 255, 0.1));
+    --modal-accent: #00f2ff;
+    --frame-thickness: 2px; /* Border thickness for the edge frame */
+
+    /* GOOGLE FLOW VEIL VARIABLES */
+    --veil-color: rgba(180, 0, 0, 0.25); 
+    
+    /* FOOTER CORE PROFILE BACKINGS */
+    --footer-bg: #000000;
+}
+
+body, html {
+    margin: 0; 
+    padding: 0;
+    background-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    color: var(--text-main);
+    scroll-behavior: smooth;
+    cursor: none;
+    /* Prevent black edge bleed during 3D transforms */
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* DYNAMIC STYLISH FRAME */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: var(--frame-thickness) solid transparent;
+    border-image: linear-gradient(135deg, var(--accent), var(--accent-purple), var(--accent)) 1;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.2);
+    animation: frameGlow 4s infinite alternate;
+}
+
+@keyframes frameGlow {
+    0% { opacity: 0.7; filter: drop-shadow(0 0 5px var(--accent)); }
+    100% { opacity: 1; filter: drop-shadow(0 0 15px var(--accent-purple)); }
+}
+
+/* BACKGROUND ENGINE WITH OVERFLOW PROTECTION */
+.bg-fixed { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    z-index: -1; 
+    overflow: hidden; 
+    background: #000;
+}
+
+/* The Google Flow Veil Overlay */
+.bg-fixed::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--veil-color);
+    mix-blend-mode: multiply; 
+    z-index: 1;
+    pointer-events: none;
+}
+
+video { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 115%; 
+    min-height: 115%; 
+    object-fit: cover; 
+    transform: translate(-50%, -50%);
+    filter: brightness(0.7) contrast(1.1); 
+    will-change: transform; 
+}
