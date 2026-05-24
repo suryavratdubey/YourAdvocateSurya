@@ -6,8 +6,8 @@ export function initTextFlipper() {
 
     // Define your array of text statements to cycle through
     const statements = [
-        "Leveraging over 7 years of precision-engineered financial expertise to streamline your accounting and scale your business.",
-        "We believe in mutual growth—because your financial milestones are the true measure of our success."
+        "We safeguard your rights through precision strategy, rigorous preparation, and fearless representation.",
+        "We deliver clear strategic thinking, unyielding courtroom advocacy, and a defense deeply rooted in experience."
     ];
 
     let currentIndex = 0;
