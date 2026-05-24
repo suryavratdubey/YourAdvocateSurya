@@ -1,0 +1,123 @@
+/* css/components/modal.css */
+
+#details-overlay { 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.95); 
+    z-index: 2000; 
+    display: none; 
+    align-items: center; 
+    justify-content: center; 
+    backdrop-filter: blur(40px); 
+}
+
+.modal-content { 
+    background: var(--glass); 
+    border: 1px solid var(--border); 
+    padding: 60px; 
+    border-radius: 40px; 
+    max-width: 850px; 
+    width: 90%; 
+    position: relative; 
+    max-height: 85vh; 
+    overflow-y: auto; 
+    color: var(--text-main);
+}
+
+.close-btn { 
+    position: absolute; 
+    top: 30px; right: 40px; 
+    color: var(--modal-accent); 
+    cursor: pointer; 
+    font-weight: 800; 
+    letter-spacing: 2px; 
+}
+
+.modal-cat { 
+    color: var(--modal-accent); 
+    font-size: 0.8rem; 
+    letter-spacing: 5px; 
+    margin-bottom: 20px; 
+    display: block; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    border: 1px solid var(--modal-accent); 
+    padding: 5px 10px; 
+    width: fit-content;
+}
+
+.bullet-list { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.bullet-list li { 
+    margin-bottom: 25px; 
+    line-height: 1.8; 
+    position: relative; 
+    padding-left: 35px; 
+    color: var(--text-dim); 
+}
+
+.bullet-list li::before { 
+    content: "✦"; 
+    position: absolute; 
+    left: 0; 
+    color: var(--modal-accent); 
+    font-size: 1.2rem; 
+}
+
+.bullet-list li strong { 
+    color: var(--modal-accent); 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: 700; 
+    font-size: 1.2rem; 
+}
+
+.apply-btn { 
+    background: linear-gradient(45deg, var(--accent), var(--accent-purple)); 
+    color: #fff; 
+    border: none; 
+    padding: 20px 45px; 
+    border-radius: 50px; 
+    font-weight: 900; 
+    letter-spacing: 3px; 
+    cursor: pointer; 
+    margin-top: 30px; 
+    transition: 0.4s; 
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 242, 255, 0.2);
+}
+
+.apply-btn:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 15px 35px rgba(0, 242, 255, 0.4); 
+}
+
+.form-group label { 
+    font-size: 0.8rem; 
+    color: var(--modal-accent); 
+    letter-spacing: 2px; 
+    font-weight: 800; 
+    margin-bottom: 10px; 
+    display: block; 
+}
+
+.form-group input, .form-group select, .form-group textarea { 
+    background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid var(--border); 
+    padding: 18px; 
+    color: var(--text-main); 
+    border-radius: 15px; 
+    outline: none; 
+    width: 100%;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { 
+    border-color: var(--accent); 
+    box-shadow: 0 0 15px var(--accent); 
+}

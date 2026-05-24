@@ -1,0 +1,109 @@
+/* css/components/chatbot.css */
+
+/* BOT TOGGLE BUTTON */
+#bot-toggle {
+    position: fixed; 
+    bottom: 30px; right: 30px; 
+    width: 60px; height: 60px;
+    background: rgba(255, 255, 255, 0.1); 
+    border: 2px solid var(--accent);
+    border-radius: 50%; 
+    z-index: 10001; 
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    box-shadow: 0 0 15px var(--accent); 
+    transition: 0.3s;
+    animation: neonPulse 2s infinite alternate;
+}
+
+#bot-toggle:hover { 
+    transform: scale(1.1); 
+    box-shadow: 0 0 25px var(--accent); 
+}
+
+/* BOT CONTAINER */
+#bot-container {
+    position: fixed; 
+    bottom: 100px; right: 30px; 
+    width: 320px; height: 450px;
+    background: rgba(12, 12, 12, 0.95); 
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 25px; 
+    z-index: 10001;
+    display: none; 
+    flex-direction: column; 
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+#bot-header { 
+    padding: 20px; 
+    background: rgba(255,255,255,0.05); 
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+#bot-messages { 
+    flex: 1; 
+    padding: 15px; 
+    overflow-y: auto; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    scrollbar-width: thin; 
+}
+
+.msg { 
+    padding: 10px 15px; 
+    border-radius: 15px; 
+    max-width: 80%; 
+    font-size: 0.85rem; 
+    line-height: 1.4; 
+}
+
+.msg.bot { 
+    background: rgba(0, 242, 255, 0.1); 
+    border-left: 3px solid var(--accent); 
+    align-self: flex-start; 
+    color: #fff; 
+}
+
+.msg.user { 
+    background: rgba(189, 0, 255, 0.1); 
+    border-right: 3px solid var(--accent-purple); 
+    align-self: flex-end; 
+    text-align: right; 
+    color: #fff; 
+}
+
+#bot-input-area { 
+    padding: 15px; 
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    display: flex; 
+    gap: 10px; 
+}
+
+#bot-input-area input { 
+    flex: 1; 
+    background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255,255,255,0.2); 
+    border-radius: 10px; 
+    padding: 10px; 
+    color: #fff; 
+    outline: none; 
+}
+
+#bot-input-area button { 
+    background: var(--accent); 
+    border: none; 
+    border-radius: 10px; 
+    padding: 0 15px; 
+    cursor: pointer; 
+    color: #000; 
+    font-weight: bold; 
+}
