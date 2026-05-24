@@ -171,8 +171,8 @@ header {
 }
 
 .skill-tag {
-    background: rgba(255, 255, 255, 100); 
-    border: 1px solid rgba(255, 255, 255, 0.50); 
+    background: rgba(255, 255, 255, 0.88); 
+    border: 1px solid rgba(255, 255, 255, 0.25); 
     padding: 12px 24px; 
     border-radius: 50px;
     font-size: 0.9rem; 
